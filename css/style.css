@@ -121,6 +121,7 @@ h1 {
 }
 
 .task-list {
+  margin-bottom: 6.588rem;
   display: flex;
   flex-direction: column;
   gap: 0.941rem;
@@ -204,7 +205,7 @@ input[type=checkbox] {
   bottom: 0;
   height: 8.294rem;
   width: 100vw;
-  background: linear-gradient(to bottom, rgba(249, 245, 244, 0.3), #f9f5f4);
+  background: linear-gradient(to bottom, rgba(249, 245, 244, 0), #f9f5f4);
   z-index: 1;
 }
 
