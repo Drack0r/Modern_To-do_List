@@ -1,0 +1,10 @@
+// _base.scss - Fichier de styles globaux
+@use "../utils/variables" as *;
+
+body {
+  position: relative;
+  padding-top: 2rem;
+  padding-right: 1.297rem;
+  padding-left: 1.297rem;
+  background: $bg-primary;
+}

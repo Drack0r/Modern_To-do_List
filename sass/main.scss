@@ -1,0 +1,13 @@
+// main.scss - Fichier principal
+
+// BASE
+@use "./base/reset";
+@use "./base/base";
+@use "./base/typography";
+
+// LAYOUT
+@use "./layouts/main";
+
+// ---------- À faire ---------- //
+// hidden checkbox
+// mixins.scss

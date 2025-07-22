@@ -1,0 +1,257 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  position: relative;
+  padding-top: 2rem;
+  padding-right: 1.297rem;
+  padding-left: 1.297rem;
+  background: #f9f5f4;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 17px;
+  line-height: 1;
+  color: #000;
+}
+
+h1 {
+  width: fit-content;
+  margin-bottom: 1.882rem;
+  font-size: 2.117rem;
+  font-weight: 800;
+  letter-spacing: -2%;
+  color: #000;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.941rem;
+}
+
+.task {
+  position: relative;
+  min-height: 3.294rem;
+  width: 100%;
+  padding: 0.941rem;
+  display: flex;
+  align-items: center;
+  background: #eae6e5;
+  border-radius: 12px;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-checkbox .checkmark {
+  position: relative;
+  display: inline-block;
+  height: 1.294rem;
+  width: 1.294rem;
+  margin-right: 0.647rem;
+  border: 2px solid #9f9f9f;
+  border-radius: 6px;
+}
+
+.custom-checkbox input[type=checkbox]:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+
+.custom-checkbox input[type=checkbox]:checked + .checkmark {
+  background-color: #222222;
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+}
+
+input[type=checkbox] {
+  margin-right: 0.647rem;
+}
+
+.task__name {
+  color: #121212;
+}
+
+.delete-button {
+  position: absolute;
+  right: 0.941rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b6b6b6;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.add-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 8.294rem;
+  width: 100vw;
+  background: linear-gradient(to bottom, rgba(249, 245, 244, 0.3), #f9f5f4);
+  z-index: 1;
+}
+
+.actions-container {
+  position: absolute;
+  bottom: 1.529rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3.294rem;
+  width: 89.767%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-task__input {
+  position: relative;
+  height: 100%;
+  width: 76.943%;
+  padding: 1rem 1.235rem;
+  font-size: 1.058rem;
+  color: #222222;
+  background: #eae6e5;
+  border: none;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.add-task__input::placeholder {
+  font-size: 1.058rem;
+  color: rgba(34, 34, 34, 0.8);
+}
+
+.add-task__button {
+  position: relative;
+  height: 100%;
+  width: 19.948%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.529rem;
+  color: #fff;
+  background: #393433;
+  border: none;
+  border-radius: 12px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

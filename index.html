@@ -4,57 +4,158 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-do List</title>
+    <link rel="icon" href="./images/icons/list-icon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
-    <h1>To-do List</h1>
+    <div class="main-container">
+      <h1>To-do List</h1>
 
-    <ul>
-      <li>
-        <input type="checkbox" />
-        <span>Boire de l'eau</span>
-        <button>Supprimer</button>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <span>Manger sain</span>
-        <button>Supprimer</button>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <span>Faire du sport</span>
-        <button>Supprimer</button>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <span>Voir un film</span>
-        <button>Supprimer</button>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <span>Faire les courses</span>
-        <button>Supprimer</button>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <span>Passer l'aspirateur</span>
-        <button>Supprimer</button>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <span>Aller voir Papy</span>
-        <button>Supprimer</button>
-      </li>
-      <li>
-        <input type="checkbox" />
-        <span>Cuisiner un plat</span>
-        <button>Supprimer</button>
-      </li>
-    </ul>
+      <ul class="task-list">
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
 
-    <div>
-      <input type="text" placeholder="Écrire une tâche..." />
-      <button>Ajouter</button>
+          <span class="task__name">Boire de l'eau</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <span class="task__name">Faire du sport</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <span class="task__name">Cuisiner un repas</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <span class="task__name">Regarder un film</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <span class="task__name">Faire les courses</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <span class="task__name">Passer l'aspirateur</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <span class="task__name">Nourrir les chats</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <span class="task__name">Descendre les poubelles</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+
+        <li class="task">
+          <label class="custom-checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+
+          <span class="task__name">Appeler Mamy</span>
+
+          <button class="delete-button">
+            <i class="fa-solid fa-trash-can"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="add-container">
+      <div class="actions-container">
+        <input
+          type="text"
+          class="add-task__input"
+          placeholder="Écrire une tâche..."
+        />
+        <button class="add-task__button">+</button>
+      </div>
     </div>
   </body>
 </html>

@@ -1,0 +1,9 @@
+// _typography.scss - Fichier de typographie
+@use "../utils/variables" as *;
+
+html {
+  font-family: $font-family-primary;
+  font-size: 17px;
+  line-height: 1;
+  color: $black-1;
+}

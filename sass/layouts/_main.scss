@@ -1,0 +1,145 @@
+// _main.scss - Fichier de style principal de la page
+@use "../utils/variables" as *;
+
+h1 {
+  width: fit-content;
+  margin-bottom: 1.882rem;
+  font-size: 2.117rem;
+  font-weight: 800;
+  letter-spacing: -2%;
+  color: $black-1;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.941rem;
+}
+
+.task {
+  position: relative;
+  min-height: 3.294rem;
+  width: 100%;
+  padding: 0.941rem;
+  display: flex;
+  align-items: center;
+  background: $bg-secondary;
+  border-radius: 12px;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.custom-checkbox .checkmark {
+  position: relative;
+  display: inline-block;
+  height: 1.294rem;
+  width: 1.294rem;
+  margin-right: 0.647rem;
+  border: 2px solid $gray-2;
+  border-radius: 6px;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  width: 6px;
+  height: 12px;
+  border: solid $white-1;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+  background-color: $black-3;
+  border: solid transparent;
+  border-width: 0 2px 2px 0;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.647rem;
+}
+
+.task__name {
+  color: $black-2;
+}
+
+.delete-button {
+  position: absolute;
+  right: 0.941rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $gray-1;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.add-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 8.294rem;
+  width: 100vw;
+  background: $linear-gradient-1;
+  z-index: 1;
+}
+
+.actions-container {
+  position: absolute;
+  bottom: 1.529rem;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3.294rem;
+  width: 89.767%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-task__input {
+  position: relative;
+  height: 100%;
+  width: 76.943%;
+  padding: 1rem 1.235rem;
+  font-size: 1.058rem;
+  color: $black-3;
+  background: $bg-secondary;
+  border: none;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.add-task__input::placeholder {
+  font-size: 1.058rem;
+  color: rgba($black-3, 0.8);
+}
+
+.add-task__button {
+  position: relative;
+  height: 100%;
+  width: 19.948%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.529rem;
+  color: $white-1;
+  background: $bg-tertiary;
+  border: none;
+  border-radius: 12px;
+  z-index: 2;
+  cursor: pointer;
+}
